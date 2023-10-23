@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">
+        <canvas id="myChart"></canvas>
+      </div>
+         
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+<script>
+  const ctx = document.getElementById('myChart');
+
+  const data = {
+  labels: [
+    'Eating',
+    'Drinking',
+    'Sleeping',
+    'Designing',
+    'Coding',
+    'Cycling',
+    'Running'
+  ],
+  datasets: [ {
+    label: 'LowRisk',
+    data: [28, 48, 40, 19, 96, 27, 100],
+    fill: true,
+    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+    borderColor: 'rgb(54, 162, 235)',
+    pointBackgroundColor: 'rgb(54, 162, 235)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(54, 162, 235)'
+  },
+  {
+    label: 'MidRisk',
+    data: [65, 59, 90, 81, 56, 55, 40],
+    fill: true,
+    backgroundColor: 'rgba(247, 239, 2, 0.2)',
+    borderColor: 'rgb(247, 239, 2)',
+    pointBackgroundColor: 'rgb(247, 239, 2)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(247, 239, 2)'
+  },
+  {
+    label: 'HighRisk',
+    data: [ 96, 27, 100,28, 48, 40, 19],
+    fill: true,
+    backgroundColor: 'rgba( 247, 25, 5,0.2)',
+    borderColor: 'rgb(247, 25, 5)',
+    pointBackgroundColor: 'rgb(247, 25, 5)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(247, 25, 5)'
+  }]
+};
+
+  new Chart(ctx, {
+    type: 'radar',
+  data: data,
+  options: {
+    elements: {
+      line: {
+        borderWidth: 3
+      }
+    }
+  },
+  });
+</script>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        font-family: 'Montserrat';
+    }
+
+    #d1 {
+        width: 40%;
+        height: 40%;
+
+    }
+
+    pre {
+        font-size: 1vw;
+    }
+
+    @media (max-width: 500px) {
+        pre {
+            font-size: 2vw;
+        }
+    }
+</style>

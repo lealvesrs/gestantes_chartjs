@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Médias de Risco</title>
 </head>
 <body>
+  <h1>Médias de Risco</h1>
     <div id="d1">
         <canvas id="myChart"></canvas>
       </div>
@@ -20,17 +21,16 @@
 
   const data = {
   labels: [
-    'Eating',
-    'Drinking',
-    'Sleeping',
-    'Designing',
-    'Coding',
-    'Cycling',
-    'Running'
+    'Age',
+    'Systolic',
+    'Diastolic',
+    'BS',
+    'BodyTemp',
+    'HeartRate'
   ],
   datasets: [ {
     label: 'LowRisk',
-    data: [28, 48, 40, 19, 96, 27, 100],
+    data: [26.86945812807882, 105.86699507389163, 72.53448275862068, 7.220270935960589, 36.87164750957855, 72.77093596059113],
     fill: true,
     backgroundColor: 'rgba(54, 162, 235, 0.2)',
     borderColor: 'rgb(54, 162, 235)',
@@ -41,7 +41,7 @@
   },
   {
     label: 'MidRisk',
-    data: [65, 59, 90, 81, 56, 55, 40],
+    data: [28.363095238095237, 113.1547619047619, 74.23214285714286, 7.795744047619047, 37.12962962962963, 74.17559523809524],
     fill: true,
     backgroundColor: 'rgba(247, 239, 2, 0.2)',
     borderColor: 'rgb(247, 239, 2)',
@@ -52,7 +52,7 @@
   },
   {
     label: 'HighRisk',
-    data: [ 96, 27, 100,28, 48, 40, 19],
+    data: [ 36.216911764705884, 124.19485294117646, 85.07352941176471, 12.122610294117647, 37.16625816993464, 76.74264705882354],
     fill: true,
     backgroundColor: 'rgba( 247, 25, 5,0.2)',
     borderColor: 'rgb(247, 25, 5)',
@@ -88,8 +88,8 @@
     }
 
     #d1 {
-        width: 40%;
-        height: 40%;
+        width: 50%;
+        height: 50%;
 
     }
 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systolic Risk</title>
+</head>
+<body>
+  <h1>Systolic Risk</h1>
+    <div id="d1">
+        <canvas id="myChart"></canvas>
+      </div>
+         
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['70 a 80', '80 a 90', '90 a 100','100 a 110','110 a 120', '120 a 130', '130 a 140', '140 a 150', '150 a 160'],
+      datasets: [
+        {
+        label: 'LowRisk',
+        data: [32, 16, 82, 65, 2, 209, 0, 0, 0],
+        borderWidth: 2,
+        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        borderColor: "rgba(54, 162, 235)"
+        },
+        {
+        label: 'MidRisk',
+        data: [2, 19, 52, 22, 17, 171, 48, 5, 0],
+        borderWidth: 2,
+        backgroundColor: "rgba(247, 239, 2, 0.2)", 
+        borderColor: 'rgb(247, 239, 2)'
+        },
+        {
+        label: 'HighRisk',
+        data: [70, 15, 34, 5, 8, 70, 15, 115, 0],
+        borderWidth: 2,
+        backgroundColor: "rgba( 247, 25, 5, 0.2)", 
+        borderColor: 'rgb( 247, 25, 5)'
+        }         
+      ]
+      
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        font-family: 'Montserrat';
+    }
+
+    #d1 {
+        width: 70%;
+        height: 70%;
+
+    }
+
+    pre {
+        font-size: 1vw;
+    }
+
+    @media (max-width: 500px) {
+        pre {
+            font-size: 2vw;
+        }
+    }
+</style>

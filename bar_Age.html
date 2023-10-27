@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Risk</title>
+</head>
+<body>
+  <h1>Age Risk</h1>
+    <div id="d1">
+        <canvas id="myChart"></canvas>
+      </div>
+         
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['10 a 15', '15 a 20', '20 a 25','25 a 30', '30 a 35', '35 a 40', '40 a 45', '45 a 50', '50 a 55', '55 a 60','60 a 65','65 a 70'],
+      datasets: [
+        {
+        label: 'LowRisk',
+        data: [19, 118, 111, 30, 33, 21, 17, 17, 6, 14, 14, 3],
+        borderWidth: 2,
+        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        borderColor: "rgba(54, 162, 235)"
+        },
+        {
+        label: 'MidRisk',
+        data: [22, 79, 58, 62, 44, 11, 11, 8, 19, 8, 14, 0],
+        borderWidth: 2,
+        backgroundColor: "rgba(247, 239, 2, 0.2)", 
+        borderColor: 'rgb(247, 239, 2)'
+        },
+        {
+        label: 'HighRisk',
+        data: [13, 26, 10, 36, 33, 34, 41, 20, 31, 18, 9, 1],
+        borderWidth: 2,
+        backgroundColor: "rgba( 247, 25, 5, 0.2)", 
+        borderColor: 'rgb( 247, 25, 5)'
+        }         
+      ]
+      
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        font-family: 'Montserrat';
+    }
+
+    #d1 {
+        width: 70%;
+        height: 70%;
+
+    }
+
+    pre {
+        font-size: 1vw;
+    }
+
+    @media (max-width: 500px) {
+        pre {
+            font-size: 2vw;
+        }
+    }
+</style>

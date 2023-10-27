@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS Risk</title>
+</head>
+<body>
+  <h1>BS Risk</h1>
+    <div id="d1">
+        <canvas id="myChart"></canvas>
+      </div>
+         
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['6 a 8', '8 a 10', '10 a 12','12 a 14', '14 a 16', '16 a 18', '18 a 20'],
+      datasets: [
+        {
+        label: 'LowRisk',
+        data: [396, 4, 4, 0, 0, 0, 0],
+        borderWidth: 2,
+        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        borderColor: "rgba(54, 162, 235)"
+        },
+        {
+        label: 'MidRisk',
+        data: [279, 25, 8, 6, 5, 9, 4],
+        borderWidth: 2,
+        backgroundColor: "rgba(247, 239, 2, 0.2)", 
+        borderColor: 'rgb(247, 239, 2)'
+        },
+        {
+        label: 'HighRisk',
+        data: [74, 24, 44, 21, 49, 13, 47],
+        borderWidth: 2,
+        backgroundColor: "rgba( 247, 25, 5, 0.2)", 
+        borderColor: 'rgb( 247, 25, 5)'
+        }         
+      ]
+      
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        font-family: 'Montserrat';
+    }
+
+    #d1 {
+        width: 70%;
+        height: 70%;
+
+    }
+
+    pre {
+        font-size: 1vw;
+    }
+
+    @media (max-width: 500px) {
+        pre {
+            font-size: 2vw;
+        }
+    }
+</style>

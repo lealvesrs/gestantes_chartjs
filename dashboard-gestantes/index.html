@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Custom chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+  </head>
+  <body>
+    <div class="grid-container">
+    <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <p class="font-weight-bold">DASHBOARD</p>
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <p class="chart-title">Gráfico barras Age</p>
+            <canvas id="ageChart"></canvas>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Gráfico barras BS</p>
+            <canvas id="bsChart"></canvas>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Gráfico barras Systolic</p>
+            <canvas id="systolicChart"></canvas>
+          </div>
+        
+      </main>
+      <div class="charts2">
+
+        <div class="charts-card2">
+          <p class="chart-title">Gráfico Radar</p>
+          <canvas id="radar"></canvas>
+        </div>
+
+      </div>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

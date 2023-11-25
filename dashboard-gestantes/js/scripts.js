@@ -47,7 +47,7 @@ const ctxBS = document.getElementById('bsChart');
   new Chart(ctxBS, {
     type: 'bar',
     data: {
-      labels: ['108 a 144', '144 a 180', '180 a 216', '216 a 252','252 a 288', '288 a 324', '324 a 360'],
+      labels: [{'6 a 8','8 a 10', '10 a 12', '12 a 14', '14 a 16','16 a 18', '18 a 20'],
       datasets: [
         {
         label: 'LowRisk',
